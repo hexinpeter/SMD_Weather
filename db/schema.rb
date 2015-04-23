@@ -11,9 +11,67 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150423150224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "locations", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "longtitude"
+    t.decimal  "latitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "precipitations", force: :cascade do |t|
+    t.integer  "amount"
+    t.integer  "reading_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "precipitations", ["reading_id"], name: "index_precipitations_on_reading_id", using: :btree
+
+  create_table "readings", force: :cascade do |t|
+    t.integer  "location_id"
+    t.integer  "source_id"
+    t.datetime "time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "readings", ["location_id"], name: "index_readings_on_location_id", using: :btree
+  add_index "readings", ["source_id"], name: "index_readings_on_source_id", using: :btree
+
+  create_table "sources", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "temperatures", force: :cascade do |t|
+    t.float    "value"
+    t.float    "dew_point"
+    t.integer  "reading_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "temperatures", ["reading_id"], name: "index_temperatures_on_reading_id", using: :btree
+
+  create_table "winds", force: :cascade do |t|
+    t.string   "direction"
+    t.float    "speed"
+    t.integer  "reading_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "winds", ["reading_id"], name: "index_winds_on_reading_id", using: :btree
+
+  add_foreign_key "precipitations", "readings"
+  add_foreign_key "temperatures", "readings"
+  add_foreign_key "winds", "readings"
 end
