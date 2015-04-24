@@ -10,9 +10,5 @@ class Reading < ActiveRecord::Base
 		def new_with_unix_time(time)
 			Reading.new(time: Time.at(time).utc)
 		end
-
-		def new_with_timezone(time, zone)
-
-		end
 	end
 end

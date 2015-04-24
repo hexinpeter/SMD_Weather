@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # RESTful API
 gem 'rest-client'
 
+gem 'nokogiri'
+
 gem 'slim'
 gem 'simple_form'
 

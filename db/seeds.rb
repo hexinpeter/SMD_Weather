@@ -41,6 +41,13 @@ Location.create(
 )
 
 Location.create(
+	name: "Cranbourne",
+	longtitude: 145.26,
+	latitude: -38.13,
+	timezone: "Melbourne"
+)
+
+Location.create(
 	name: "Essendon Airport",
 	longtitude: 144.91,
 	latitude: -37.73,
