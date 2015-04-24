@@ -11,24 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150423150224) do
+ActiveRecord::Schema.define(version: 20150424023312) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "locations", force: :cascade do |t|
     t.string   "name"
-    t.decimal  "longtitude"
-    t.decimal  "latitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "longtitude", precision: 8, scale: 5
+    t.decimal  "latitude",   precision: 8, scale: 5
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "precipitations", force: :cascade do |t|
-    t.integer  "amount"
+    t.decimal  "amount",     precision: 8, scale: 5
     t.integer  "reading_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   add_index "precipitations", ["reading_id"], name: "index_precipitations_on_reading_id", using: :btree
@@ -52,21 +52,21 @@ ActiveRecord::Schema.define(version: 20150423150224) do
   end
 
   create_table "temperatures", force: :cascade do |t|
-    t.float    "value"
-    t.float    "dew_point"
+    t.decimal  "value",      precision: 8, scale: 5
+    t.decimal  "dew_point",  precision: 8, scale: 5
     t.integer  "reading_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   add_index "temperatures", ["reading_id"], name: "index_temperatures_on_reading_id", using: :btree
 
   create_table "winds", force: :cascade do |t|
     t.string   "direction"
-    t.float    "speed"
+    t.decimal  "speed",      precision: 8, scale: 5
     t.integer  "reading_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   add_index "winds", ["reading_id"], name: "index_winds_on_reading_id", using: :btree
