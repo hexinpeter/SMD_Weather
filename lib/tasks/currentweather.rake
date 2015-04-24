@@ -52,6 +52,7 @@ namespace :currentweather do
       reading.precipitation = Precipitation.create(amount: rain_since_9)
 
       reading.save!
+      p "#{name} data has been retrieved from Bureau of Meterology"
     end
   end
 
