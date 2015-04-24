@@ -22,7 +22,7 @@ set :whenever_environment, 'development'
 
 set :output, "/Users/hexin/Desktop/RubyLearn/rails_projects/SMD_PROJ/Proj2/log/cron_log.log"
 
-every 1.minute do
+every 10.minutes do
   rake "currentweather:bom", :environment => 'development'
   rake "currentweather:forecastio", :environment => 'development'
 end
