@@ -1,22 +1,23 @@
-table.table
-	tr
-		th Location
-		th Time
-		th Source
-		th Temperature (&#8451;)
-		th Dew Point (&#8451;)
-		th Rainfall Amount (mm per hour)
-		th Wind Direction
-		th Wind Speed (km/h)
-	- @locations.each do |station|
-		- reading = station.readings.last
-		tr
-			td = station.name
-			td = reading.time.in_time_zone(station.timezone)
-			td = reading.source.name
-			td = reading.temperature.value.to_s
-			td = reading.temperature.dew_point.to_s
-			td = reading.precipitation.amount.to_s if reading.precipitation
-			td = reading.wind.direction
-			td = reading.wind.speed.to_s
+table.table.table-hover
+  tr
+    th Location
+    th Time
+    th Source
+    th Temperature (&#8451;)
+    th Dew Point (&#8451;)
+    th Rainfall Amount (mm per hour)
+    th Wind Direction
+    th Wind Speed (km/h)
+  - @locations.each do |station|
+    - @sources.each do |source|
+      - reading = Reading.where(location: station, source: source).order('time').last
+      tr
+        td = station.name
+        td = reading.time.in_time_zone(station.timezone)
+        td = reading.source.name
+        td = reading.temperature.value.to_s
+        td = reading.temperature.dew_point.to_s
+        td = reading.precipitation.amount.to_s if reading.precipitation
+        td = reading.wind.direction
+        td = reading.wind.speed.to_s
 
