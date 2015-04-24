@@ -62,7 +62,7 @@ namespace :currentweather do
       rain_since_9 = area.css('td[headers~="obs-rainsince9am"]').text
       previous_reading = Reading.where(source: reading.source, location: reading.location).last
       current_rain_amount = nil
-      if previous_reading.precipitation && previous_reading.precipitation.since_nine && rain_since_9.match(/\d/)
+      if previous_reading && previous_reading.precipitation && previous_reading.precipitation.since_nine && rain_since_9.match(/\d/)
         time_diff = time - previous_reading.time
         if time_diff < 1
           current_rain_amount = previous_reading.precipitation.amount

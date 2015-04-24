@@ -171,6 +171,6 @@ Source.create(
   location: "http://www.bom.gov.au/vic/observations/"
 )
 
-p "Source data populated"
+p "Source data seeded!"
 
 

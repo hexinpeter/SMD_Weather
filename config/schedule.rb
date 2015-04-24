@@ -18,8 +18,6 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-set :whenever_environment, 'development'
-
 set :output, "#{path}/log/cron.log"
 
 every 10.minutes do
