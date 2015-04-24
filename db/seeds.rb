@@ -9,147 +9,147 @@ Location.create(
 	name: 'Melbourne (Olympic Park)',
 	longtitude: 144.98,
 	latitude: -37.83,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Melbourne Airport",
 	longtitude: 144.83,
 	latitude: -37.67,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Avalon",
 	longtitude: 144.48,
 	latitude:  -38.03,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Cerberus",
 	longtitude: 145.18,
 	latitude: -38.36,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Coldstream",
 	longtitude: 145.41,
 	latitude: -37.72,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Essendon Airport",
 	longtitude: 144.91,
 	latitude: -37.73,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Fawkner Beacon",
 	longtitude: 144.93,
 	latitude: -37.91,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Ferny Creek",
 	longtitude: 145.35,
 	latitude: -37.87,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Frankston",
 	longtitude: 145.12,
 	latitude: -38.15,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Geelong Racecourse",
 	longtitude: 144.38,
 	latitude: -38.17,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Laverton",
 	longtitude: 144.76,
 	latitude: -37.86,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Moorabbin Airport",
 	longtitude: 145.10,
 	latitude: -37.98,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Phillip Island",
 	longtitude: 145.15,
 	latitude:  -38.5,
-	timezone: "AEST"1
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Point Wilson",
 	longtitude: 144.54,
 	latitude: -38.10,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Rhyll",
 	longtitude: 145.31,
 	latitude: -38.46,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Scoresby",
 	longtitude: 145.26,
 	latitude: -37.87,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Sheoaks",
 	longtitude: 144.13,
 	latitude: -37.91,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "South Channel Island",
 	longtitude: 144.80,
 	latitude: -38.31,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Rhyll",
 	longtitude: 145.31,
 	latitude: -38.46,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "St Kilda Harbour RMYS",
 	longtitude: 144.96,
 	latitude: -37.86,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 Location.create(
 	name: "Viewbank",
 	longtitude: 145.10,
 	latitude: -37.74,
-	timezone: "AEST"
+	timezone: "Melbourne"
 )
 
 p "Location data seeded!"

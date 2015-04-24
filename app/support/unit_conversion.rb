@@ -18,5 +18,4 @@ module UnitConversion
 	def inch_to_mm(value)
 		value * 25.4
 	end
-
 end

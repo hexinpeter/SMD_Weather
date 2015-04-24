@@ -26,6 +26,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # RESTful API
 gem 'rest-client'
 
+gem 'slim'
+gem 'simple_form'
+
+# for bootstrap
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
