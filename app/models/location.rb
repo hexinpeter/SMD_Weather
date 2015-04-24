@@ -1,5 +1,5 @@
 class Location < ActiveRecord::Base
-	has_many :readings
+  has_many :readings
 
-	validates :name, uniqueness: true
+  validates :name, uniqueness: true
 end
