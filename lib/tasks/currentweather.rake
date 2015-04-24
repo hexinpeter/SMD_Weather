@@ -42,7 +42,9 @@ namespace :currentweather do
 
       current_temperature = area.css('td[headers~="obs-temp"]').text
       dew_temperature = area.css('td[headers~="obs-dewpoint"]').text
-      reading.temperature = Temperature.create(value: current_temperature, dew_point: dew_temperature)
+      if current_temperature.match(/\d/) && dew_temperature.match(/\d/)
+        reading.temperature = Temperature.create(value: current_temperature, dew_point: dew_temperature)
+      end
 
       wind_speed = area.css('td[headers~="obs-wind-spd-kph"]').text
       wind_dir = area.css('td[headers~="obs-wind-dir"]').text

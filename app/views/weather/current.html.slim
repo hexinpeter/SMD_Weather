@@ -15,8 +15,8 @@ table.table.table-hover.table-striped
         td = station.name
         td = reading.time.in_time_zone(station.timezone)
         td = reading.source.name
-        td = reading.temperature.value.to_s
-        td = reading.temperature.dew_point.to_s
+        td = reading.temperature.value.to_s if reading.temperature
+        td = reading.temperature.dew_point.to_s if reading.temperature
         td = reading.precipitation.amount.to_s if reading.precipitation
         td = reading.wind.direction
         td = reading.wind.speed.to_s
