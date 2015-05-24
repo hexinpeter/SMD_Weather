@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150424114245) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "locations", force: :cascade do |t|
     t.string   "name"
     t.decimal  "longtitude", precision: 8, scale: 5
@@ -33,7 +30,7 @@ ActiveRecord::Schema.define(version: 20150424114245) do
     t.decimal  "since_nine", precision: 8, scale: 5
   end
 
-  add_index "precipitations", ["reading_id"], name: "index_precipitations_on_reading_id", using: :btree
+  add_index "precipitations", ["reading_id"], name: "index_precipitations_on_reading_id"
 
   create_table "readings", force: :cascade do |t|
     t.integer  "location_id"
@@ -43,8 +40,8 @@ ActiveRecord::Schema.define(version: 20150424114245) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "readings", ["location_id"], name: "index_readings_on_location_id", using: :btree
-  add_index "readings", ["source_id"], name: "index_readings_on_source_id", using: :btree
+  add_index "readings", ["location_id"], name: "index_readings_on_location_id"
+  add_index "readings", ["source_id"], name: "index_readings_on_source_id"
 
   create_table "sources", force: :cascade do |t|
     t.string   "name"
@@ -61,7 +58,7 @@ ActiveRecord::Schema.define(version: 20150424114245) do
     t.datetime "updated_at",                         null: false
   end
 
-  add_index "temperatures", ["reading_id"], name: "index_temperatures_on_reading_id", using: :btree
+  add_index "temperatures", ["reading_id"], name: "index_temperatures_on_reading_id"
 
   create_table "winds", force: :cascade do |t|
     t.string   "direction"
@@ -71,9 +68,6 @@ ActiveRecord::Schema.define(version: 20150424114245) do
     t.datetime "updated_at",                         null: false
   end
 
-  add_index "winds", ["reading_id"], name: "index_winds_on_reading_id", using: :btree
+  add_index "winds", ["reading_id"], name: "index_winds_on_reading_id"
 
-  add_foreign_key "precipitations", "readings"
-  add_foreign_key "temperatures", "readings"
-  add_foreign_key "winds", "readings"
 end

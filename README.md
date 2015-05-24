@@ -1,8 +1,8 @@
 # README
 
+
 ## Installation
 
-* $ start Postgres server
 * $ `bundle install`
 * $ `rake db:create`
 * $ `rake db:migrate`
