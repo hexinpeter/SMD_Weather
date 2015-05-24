@@ -24,4 +24,4 @@ If in "production":
 
 
 ## Notice
-The values for the "Rainfall amount" of data rows with the source being "bom" will not be empty for the first ten minutes. That is because the BOM only gives the data of "precipitation since 9 am", the "Rainfall amount" can only be calculated by getting the differences from two BOM readings.
+The values for the "Rainfall amount" of data rows with the source being "bom" will be empty for the first ten minutes. That is because the BOM only gives the data of "precipitation since 9 am". The "Rainfall amount" can only be calculated by getting the differences from two BOM readings.
